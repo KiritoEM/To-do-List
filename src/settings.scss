@@ -1,0 +1,62 @@
+$primary: #3b31c7;
+$secondary: #2c51cc;
+$color-1: rgba(49, 48, 48, 0.925);
+$color-2: rgba(53, 51, 51, 0.884);
+$font-1: 'Gabarito', cursive;
+$font-2:  'Prompt', sans-serif;;
+
+*{
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     text-decoration: none;
+     font-family: 'Lato', sans-serif;
+}
+
+@mixin screen($breakpoint) {
+     @if $breakpoint == small {
+       @media (max-width: 767px) {
+         @content;
+       }
+     }
+     @else if $breakpoint == medium {
+       @media (min-width: 768px) and (max-width: 1023px) {
+         @content;
+       }
+     }
+     @else if $breakpoint == large {
+       @media (min-width: 1024px) {
+         @content;
+       }
+     }
+   }
+ 
+ 
+
+@mixin spin{
+
+
+     .spinner {
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          border: 8.4px solid $secondary; /* Couleur du cercle */
+          border-top: 4px solid transparent; /* Partie supérieure transparente */
+          animation: spin 1.8s linear infinite; /* Animation de rotation */
+        }
+        
+     @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+}
+
+body{
+      background-color: $primary;
+}
+
+.app{
+     width: 100%;
+     height: 100vh;;
+     overflow: hidden;
+}

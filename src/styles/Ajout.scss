@@ -1,0 +1,128 @@
+.Ajout {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contain {
+        width: 62%;
+        height: 20rem;
+        overflow: hidden;
+        background-color: aliceblue;
+        position: relative;
+        border-radius: 5px;
+        padding: 1rem;
+        padding-top: -1.6rem;
+        box-shadow: 0 1px 15px rgba(31, 29, 29, 0.884);
+
+          @include screen(medium){
+            width: 91%;
+            height: 36rem;
+          }
+
+          @media screen and (max-width: 395px) {
+            padding: 0;
+            padding-top: 1rem;
+        }
+          @include screen(small){
+            width: 96%;
+            height: 18rem;
+          }
+
+
+        #row1 {
+
+            .title {
+                margin-left: 1%;
+                margin-top: 1rem;
+
+                h1 {
+                    font-size: 28.6px;
+                    font-weight: bold;
+                    color: $secondary;
+                    font-family: $font-1;
+                    text-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.555);
+
+                    @include screen(small){
+                        font-size: 25.6px;
+                    }
+
+                    @media screen and (max-width: 395px) {
+                      margin-left: 0.6rem;
+                    }
+
+                    
+
+                    &::after {
+                        content: "";
+                        width: 95%;
+                        border-radius: 8px;
+                        height: 2.3px;
+                        background-color: rgba(131, 131, 131, 0.438);
+                        position: absolute;
+                        top: 5rem;
+                        left: 2.4%;
+
+                        @include screen(small){
+                            top: 4.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        #row2 {
+            margin-top: 1rem;
+            overflow: hidden;
+            width: 100%;
+
+        
+
+            .content {
+                max-width: 100%;
+                margin-left: 1.5%;
+                height: 22rem;
+                margin-top: 1rem;
+                overflow-x: hidden;
+                overflow-y: auto;
+
+              label{
+                 font-size: 19px;
+                 font-weight: 500;
+              }
+
+              button{
+                 background-color: $secondary;
+                 color: #fff;
+                 font-weight: bold;
+              }
+
+               
+            }
+        }
+
+        .row3 {
+            margin-top: -12.5rem;
+
+            @include screen(small){
+                margin-top:-13.5rem ;
+                margin-right: 4%;
+            }
+
+            .button {
+                margin-right: 0.5%;
+
+                button {
+                    background-color: $secondary;
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+
+
+        }
+
+    }
+}
