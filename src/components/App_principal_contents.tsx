@@ -86,7 +86,7 @@ useEffect(() => {
                     </div>
 
                     <div className="gadget d-flex">
-                      <button className="btn">
+                      <button className="btn"  onClick={() => deleletTask(task.id)}>
                         <FontAwesomeIcon icon={faCheckCircle} />
                       </button>
                       <button className="btn" onClick={() => deleletTask(task.id)}>
