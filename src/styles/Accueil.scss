@@ -6,6 +6,7 @@
     height: 100vh;
     background-image: url(./../assets/Couv.jpg);
     object-fit: cover;
+    overflow: hidden;
     filter: brightness(92%);
      
       #container-principal{

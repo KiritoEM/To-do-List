@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     height: 100vh;
+    width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,8 +109,12 @@
             margin-top: -12.5rem;
 
             @include screen(small){
-                margin-top:-13.5rem ;
-                margin-right: 4%;
+                margin-top:-14rem ;
+                margin-right: 2.5%;
+            }
+
+            @include screen(medium){
+                margin-top:-12.4rem ;
             }
 
             .button {
